@@ -1,5 +1,6 @@
 # Assignments
-
+- First link is to the public page where the assignment is hosted.
+- Second link is to the code of the assignment.
 ## Week 1
 - **HTML recap exercise**
 - [HTML recap assignment](https://users.metropolia.fi/~erikroi/web_development/week1/html_recap_exercise/)
