@@ -7,7 +7,7 @@
 - [HTML recap assignment code](https://github.com/eKuuuuu/web_sovelluskehitys/blob/master/week1/html-recap/index.html)
 - **CSS recap exercise**
 - [CSS recap assignment](https://users.metropolia.fi/~erikroi/web_development/week1/css_recap_exercise/)
-- [CSS recap assignment code]()
+- [CSS recap assignment code](https://github.com/eKuuuuu/web_sovelluskehitys/tree/master/week1/css-recap)
 - **JS self studying exercise**
 - [JS self studying](link-to-assingment-2)
 - [JS self studying code](link-to-assingment-2)
