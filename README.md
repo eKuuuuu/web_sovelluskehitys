@@ -5,6 +5,9 @@
 - **HTML recap exercise**
 - [HTML recap assignment](https://users.metropolia.fi/~erikroi/web_development/week1/html_recap_exercise/)
 - [HTML recap assignment code](https://github.com/eKuuuuu/web_sovelluskehitys/blob/master/week1/html-recap/index.html)
+- **CSS recap exercise**
+- [CSS recap assignment](https://users.metropolia.fi/~erikroi/web_development/week1/css_recap_exercise/)
+- [CSS recap assignment code]()
 - **JS self studying exercise**
 - [JS self studying](link-to-assingment-2)
 - [JS self studying code](link-to-assingment-2)

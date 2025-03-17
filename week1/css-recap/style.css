@@ -1,0 +1,21 @@
+body {
+    background-color: paleturquoise;
+    font-family: "Comic Sans MS";
+}
+
+a:hover {
+    color: green;
+}
+
+img {
+    border: 2px solid black;
+    border-radius: 25px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+tr:nth-child(even) {
+    background-color: deeppink;
+}
