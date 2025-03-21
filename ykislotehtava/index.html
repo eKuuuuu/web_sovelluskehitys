@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opiskelijaravintolat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>Opiskelijaravintolat</h1>
+</header>
+
+<main>
+    <section id="restaurant-list">
+        <h2>Ravintolat</h2>
+        <ul id="restaurants"></ul>
+    </section>
+
+    <section id="menu">
+        <h2>Ruokalista</h2>
+        <button onclick="fetchMenu('day')">Näytä päivän ruokalista</button>
+        <button onclick="fetchMenu('week')">Näytä viikon ruokalista</button>
+        <div id="menu-content"></div>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

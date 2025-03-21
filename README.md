@@ -16,12 +16,12 @@
 - [Assignment 5](https://github.com/eKuuuuu/web_sovelluskehitys/tree/master/week1/js-recap1/assingment5)
 - [Assignment 6](https://github.com/eKuuuuu/web_sovelluskehitys/tree/master/week1/js-recap1/assingment6)
 - **JS recap 2 exercises**
-- [Assignment 1](
-- [Assignment 2](
-- [Assignment 3](
-- [Assignment 4](
-- [Assignment 5](
-- [Assignment 6](
+- [Assignment 1](https://github.com/eKuuuuu/web_sovelluskehitys/tree/master/week1/js-recap2/assingment1)
+- [Assignment 2](https://github.com/eKuuuuu/web_sovelluskehitys/tree/master/week1/js-recap2/assingment2)
+- [Assignment 3](https://github.com/eKuuuuu/web_sovelluskehitys/tree/master/week1/js-recap2/assingment3)
+- [Assignment 4](https://github.com/eKuuuuu/web_sovelluskehitys/tree/master/week1/js-recap2/assingment4)
+- [Assignment 5](https://github.com/eKuuuuu/web_sovelluskehitys/tree/master/week1/js-recap2/assingment5)
+- [Assignment 6](https://github.com/eKuuuuu/web_sovelluskehitys/tree/master/week1/js-recap2/assingment6)
 - **HTML self studying exercise**
 - [HTML self studying](link-to-assingment-3)
 - [HTML self studying code](link-to-assingment-3)
