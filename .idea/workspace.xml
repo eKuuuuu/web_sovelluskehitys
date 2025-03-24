@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="649ae5b1-d689-4eb2-9f40-0a495c9f2269" name="Changes" comment="yksilotehtavan aloitus">
+      <change afterPath="$PROJECT_DIR$/week2/js-recap3/lib/euclidean.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2/js-recap3/t3/t3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/web_sovelluskehitys.iml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;eKuuuuu&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/eKuuuuu/web_sovelluskehitys.git&quot;,
+    &quot;accountId&quot;: &quot;b75cc79d-e5bf-4261-b41e-80033ead1b5d&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2uRNHnZRdF8BIPjxNnqm7qqnLyx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.index.html (1).executor": "Run",
+    "JavaScript Debug.index.html (2).executor": "Run",
+    "JavaScript Debug.index.html (3).executor": "Run",
+    "JavaScript Debug.index.html (4).executor": "Run",
+    "JavaScript Debug.index.html (5).executor": "Run",
+    "JavaScript Debug.index.html.executor": "Run",
+    "JavaScript Debug.t1.html.executor": "Run",
+    "JavaScript Debug.t2.html.executor": "Run",
+    "JavaScript Debug.t3.html.executor": "Run",
+    "JavaScript Debug.t4.html.executor": "Run",
+    "JavaScript Debug.t5.html.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="index.html (3)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web_sovelluskehitys/week1/js-recap2/assingment6/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="t1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web_sovelluskehitys/week2/js-recap3/t1/t1.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="t2.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web_sovelluskehitys/week2/js-recap3/t2/t2.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="t3.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web_sovelluskehitys/week2/js-recap3/t3/t3.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="t4.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web_sovelluskehitys/week2/js-recap3/t4/t4.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.t4.html" />
+        <item itemvalue="JavaScript Debug.t3.html" />
+        <item itemvalue="JavaScript Debug.t2.html" />
+        <item itemvalue="JavaScript Debug.t1.html" />
+        <item itemvalue="JavaScript Debug.index.html (3)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.26053.12" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="649ae5b1-d689-4eb2-9f40-0a495c9f2269" name="Changes" comment="" />
+      <created>1742207342008</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1742207342008</updated>
+      <workItem from="1742207343169" duration="7938000" />
+      <workItem from="1742282965347" duration="6851000" />
+      <workItem from="1742290952375" duration="4992000" />
+      <workItem from="1742801013850" duration="490000" />
+      <workItem from="1742801520329" duration="95000" />
+      <workItem from="1742801627560" duration="13096000" />
+      <workItem from="1742831080362" duration="962000" />
+    </task>
+    <task id="LOCAL-00001" summary="week 1 first exercise">
+      <option name="closed" value="true" />
+      <created>1742207561098</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1742207561098</updated>
+    </task>
+    <task id="LOCAL-00002" summary="week one">
+      <option name="closed" value="true" />
+      <created>1742208072295</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1742208072295</updated>
+    </task>
+    <task id="LOCAL-00003" summary="week one">
+      <option name="closed" value="true" />
+      <created>1742208344529</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1742208344529</updated>
+    </task>
+    <task id="LOCAL-00004" summary="week one">
+      <option name="closed" value="true" />
+      <created>1742208442277</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1742208442277</updated>
+    </task>
+    <task id="LOCAL-00005" summary="week one">
+      <option name="closed" value="true" />
+      <created>1742210697018</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1742210697018</updated>
+    </task>
+    <task id="LOCAL-00006" summary="week one">
+      <option name="closed" value="true" />
+      <created>1742210936840</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1742210936840</updated>
+    </task>
+    <task id="LOCAL-00007" summary="js recap part1">
+      <option name="closed" value="true" />
+      <created>1742230695939</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1742230695939</updated>
+    </task>
+    <task id="LOCAL-00008" summary="js recap part1">
+      <option name="closed" value="true" />
+      <created>1742283094492</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1742283094492</updated>
+    </task>
+    <task id="LOCAL-00009" summary="js recap part2">
+      <option name="closed" value="true" />
+      <created>1742290404856</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1742290404856</updated>
+    </task>
+    <task id="LOCAL-00010" summary="js recap part2">
+      <option name="closed" value="true" />
+      <created>1742297360903</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1742297360903</updated>
+    </task>
+    <task id="LOCAL-00011" summary="yksilotehtavan aloitus">
+      <option name="closed" value="true" />
+      <created>1742562330958</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1742562330958</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="week 1 first exercise" />
+    <MESSAGE value="week one" />
+    <MESSAGE value="js recap part1" />
+    <MESSAGE value="js recap part2" />
+    <MESSAGE value="yksilotehtavan aloitus" />
+    <option name="LAST_COMMIT_MESSAGE" value="yksilotehtavan aloitus" />
+  </component>
+</project>
