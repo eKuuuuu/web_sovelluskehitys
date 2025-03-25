@@ -774,42 +774,61 @@ const restaurants = [
 const taulukko = document.querySelector('#target');
 const modal = document.querySelector('#modal');
 
-// restaurants aakkosjärjestykseen
+// Sort restaurants alphabetically by name
 restaurants.sort(function (a, b) {
     return a.name.toUpperCase() > b.name.toUpperCase() ? 1 : -1;
 });
 
 for (const restaurant of restaurants) {
-    // rivi
+    // Create a row
     const tr = document.createElement('tr');
     tr.addEventListener('click', function () {
+        // Remove highlight from all rows
         for (const elem of document.querySelectorAll('.highlight')) {
             elem.classList.remove('highlight');
         }
 
+        // Add highlight to the clicked row
         tr.classList.add('highlight');
 
-        // tyhjennä modal
+        // Clear modal content
         modal.innerHTML = '';
-        // avaa modal
+        // Open modal
         modal.showModal();
-        // tee modalin sisältö
+        // Create modal content
         const nameH3 = document.createElement('h3');
         nameH3.innerText = restaurant.name;
 
-        modal.append(nameH3);
+        const addressP = document.createElement('p');
+        addressP.innerText = `Address: ${restaurant.address}`;
+
+        const postalCodeP = document.createElement('p');
+        postalCodeP.innerText = `Postal Code: ${restaurant.postalCode}`;
+
+        const cityP = document.createElement('p');
+        cityP.innerText = `City: ${restaurant.city}`;
+
+        const phoneP = document.createElement('p');
+        phoneP.innerText = `Phone: ${restaurant.phone}`;
+
+        const companyP = document.createElement('p');
+        companyP.innerText = `Company: ${restaurant.company}`;
+
+        // Append details to modal
+        modal.append(nameH3, addressP, postalCodeP, cityP, phoneP, companyP);
     });
 
-    // nimisolu
+    // Create name cell
     const nameTd = document.createElement('td');
     nameTd.innerText = restaurant.name;
-    // osoitesolu
+    // Create address cell
     const addressTd = document.createElement('td');
     addressTd.innerText = restaurant.address;
-    // kaupunkisolu
+    // Create city cell
     const cityTd = document.createElement('td');
     cityTd.innerText = restaurant.city;
-    // lisätään solut riviin
+    // Append cells to row
     tr.append(nameTd, addressTd, cityTd);
+    // Append row to table
     taulukko.append(tr);
 }

@@ -1,0 +1,51 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 15rem;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+li input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+li label {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+li .delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+label {
+    display: block;
+    width: 100%;
+    padding-left: 1rem;
+}
+
+input {
+    position: absolute;
+    margin: 1rem;
+}
+
+input[type='checkbox']:checked + label {
+    background-color: rgb(146, 208, 136);
+    font-weight: bold;
+}
