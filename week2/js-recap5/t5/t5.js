@@ -1,4 +1,4 @@
-import { fetchData } from './lib/fetchData.js';
+import {fetchData} from '../lib/fetchData.js';
 
 // your code here
 const apiUrl = 'https://media2.edu.metropolia.fi/restaurant/api/v1';
@@ -61,14 +61,6 @@ async function getDailyMenu(id, lang) {
     }
 }
 
-async function getWeeklyMenu(id, lang) {
-    try {
-        return await fetchData(`${apiUrl}/restaurants/weekly/${id}/${lang}`);
-    } catch (error) {
-        console.error(error);
-    }
-}
-
 // restaurants aakkosjärjestykseen
 function sortRestaurants() {
     restaurants.sort(function (a, b) {
@@ -76,7 +68,6 @@ function sortRestaurants() {
     });
 }
 
-/*
 function createTable() {
     for (const restaurant of restaurants) {
         // rivi
@@ -111,79 +102,7 @@ function createTable() {
         taulukko.append(tr);
     }
 }
- */
 
-function createTable() {
-    for (const restaurant of restaurants) {
-        // rivi
-        const tr = document.createElement('tr');
-        tr.addEventListener('click', function () {
-            for (const elem of document.querySelectorAll('.highlight')) {
-                elem.classList.remove('highlight');
-            }
-
-            tr.classList.add('highlight');
-
-            // tyhjennä modal
-            modal.innerHTML = '';
-            // tee modalin sisältö
-            createModalHtml(restaurant, modal);
-
-            // luo painikkeet
-            const dailyButton = document.createElement('button');
-            dailyButton.innerText = 'Daily Menu';
-            dailyButton.addEventListener('click', async function () {
-                try {
-                    const coursesResponse = await getDailyMenu(restaurant._id, 'fi');
-                    const menuHtml = createMenuHtml(coursesResponse.courses);
-                    modal.innerHTML = '';
-                    createModalHtml(restaurant, modal);
-                    modal.insertAdjacentHTML('beforeend', menuHtml);
-                } catch (error) {
-                    console.error(error);
-                }
-            });
-
-            const weeklyButton = document.createElement('button');
-            weeklyButton.innerText = 'Weekly Menu';
-            weeklyButton.addEventListener('click', async function () {
-                try {
-                    const coursesResponse = await getWeeklyMenu(restaurant._id, 'fi');
-                    console.log('Weekly Menu:', coursesResponse); // Log the weekly menu data
-                    modal.innerHTML = '';
-                    createModalHtml(restaurant, modal);
-
-                    // Create dropdown for each day
-                    const daySelect = document.createElement('select');
-                    daySelect.innerHTML = coursesResponse.days.map((day, index) =>
-                        `<option value="${index}">${day.date}</option>`
-                    ).join('');
-
-                    const menuContainer = document.createElement('div');
-                    modal.appendChild(menuContainer);
-
-                    daySelect.addEventListener('change', function () {
-                        const selectedDay = coursesResponse.days[daySelect.value];
-                        const menuHtml = createMenuHtml(selectedDay.courses);
-                        menuContainer.innerHTML = menuHtml; // Clear previous menu and add new menu
-                    });
-
-                    modal.appendChild(daySelect);
-                    modal.showModal();
-                } catch (error) {
-                    console.error(error);
-                }
-            });
-
-            modal.append(dailyButton, weeklyButton);
-            modal.showModal();
-        });
-
-        // lisätään solut riviin
-        createRestaurantCells(restaurant, tr);
-        taulukko.append(tr);
-    }
-}
 async function main() {
     try {
         await getRestaurants();

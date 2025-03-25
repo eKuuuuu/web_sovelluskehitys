@@ -1,17 +1,63 @@
+/* General styles */
 body {
-    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    font-family: sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
 
-header {
-    background-color: #0077cc;
+/* Navbar styles */
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    display: block;
     color: white;
-    padding: 10px;
     text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
+nav ul li a:hover {
+    background-color: #111;
+}
+
+/* Table styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    background: white;
+}
+
+th {
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+    font-weight: normal;
+    padding: 0.5em 1em;
+    text-align: left;
+}
+
+td {
+    border-bottom: 1px solid #ccc;
+    padding: 0.5em 1em;
+}
+
+/* Main content */
 main {
     max-width: 800px;
     margin: 20px auto;
@@ -21,10 +67,7 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    color: #0077cc;
-}
-
+/* Buttons */
 button {
     background-color: #0077cc;
     color: white;
@@ -36,4 +79,20 @@ button {
 
 button:hover {
     background-color: #005fa3;
+}
+
+/* Modal styles */
+dialog {
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Header */
+header {
+    background-color: #0077cc;
+    color: white;
+    padding: 10px;
+    text-align: center;
 }

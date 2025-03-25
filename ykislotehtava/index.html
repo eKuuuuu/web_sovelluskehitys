@@ -1,30 +1,48 @@
 <!DOCTYPE html>
-<html lang="fi">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opiskelijaravintolat</title>
+    <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" type="module"></script>
 </head>
+
 <body>
+
 <header>
-    <h1>Opiskelijaravintolat</h1>
+    <h1>Yksilötehtävä</h1>
 </header>
 
-<main>
-    <section id="restaurant-list">
-        <h2>Ravintolat</h2>
-        <ul id="restaurants"></ul>
-    </section>
+<nav>
+    <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#login">Login</a></li>
+    </ul>
+</nav>
 
-    <section id="menu">
-        <h2>Ruokalista</h2>
-        <button onclick="fetchMenu('day')">Näytä päivän ruokalista</button>
-        <button onclick="fetchMenu('week')">Näytä viikon ruokalista</button>
-        <div id="menu-content"></div>
-    </section>
+<main>
+    <h2>Welcome to the Website</h2>
+    <p>Here is some content.</p>
+
+    <table id="target">
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>City</th>
+        </tr>
+        <!-- Add restaurant rows here -->
+    </table>
 </main>
 
-<script src="script.js"></script>
+<!-- Modal -->
+<dialog id="modal">
+    <!-- Add restaurant info here when restaurant is clicked -->
+</dialog>
+
 </body>
+
 </html>
