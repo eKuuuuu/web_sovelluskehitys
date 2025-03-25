@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="649ae5b1-d689-4eb2-9f40-0a495c9f2269" name="Changes" comment="yksilotehtavan aloitus">
-      <change afterPath="$PROJECT_DIR$/week2/js-recap3/lib/euclidean.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week2/js-recap3/t3/t3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/web_sovelluskehitys.iml" beforeDir="false" />
+    <list default="true" id="649ae5b1-d689-4eb2-9f40-0a495c9f2269" name="Changes" comment="week 2 recap_3">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week2/js-recap3/t4/t4.js" beforeDir="false" afterPath="$PROJECT_DIR$/week2/js-recap3/t4/t4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week2/js-recap3/t5/t5.js" beforeDir="false" afterPath="$PROJECT_DIR$/week2/js-recap3/t5/t5.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,10 +77,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="index.html (3)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web_sovelluskehitys/week1/js-recap2/assingment6/index.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="JavaScript Debug.t4.html">
     <configuration name="t1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web_sovelluskehitys/week2/js-recap3/t1/t1.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -96,13 +90,16 @@
     <configuration name="t4.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web_sovelluskehitys/week2/js-recap3/t4/t4.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="t5.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web_sovelluskehitys/week2/js-recap3/t5/t5.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.t4.html" />
+        <item itemvalue="JavaScript Debug.t5.html" />
         <item itemvalue="JavaScript Debug.t3.html" />
         <item itemvalue="JavaScript Debug.t2.html" />
         <item itemvalue="JavaScript Debug.t1.html" />
-        <item itemvalue="JavaScript Debug.index.html (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -127,7 +124,7 @@
       <workItem from="1742801013850" duration="490000" />
       <workItem from="1742801520329" duration="95000" />
       <workItem from="1742801627560" duration="13096000" />
-      <workItem from="1742831080362" duration="962000" />
+      <workItem from="1742831080362" duration="1872000" />
     </task>
     <task id="LOCAL-00001" summary="week 1 first exercise">
       <option name="closed" value="true" />
@@ -217,7 +214,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742562330958</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="week 2 recap_3">
+      <option name="closed" value="true" />
+      <created>1742832440789</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1742832440789</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,6 +234,7 @@
     <MESSAGE value="js recap part1" />
     <MESSAGE value="js recap part2" />
     <MESSAGE value="yksilotehtavan aloitus" />
-    <option name="LAST_COMMIT_MESSAGE" value="yksilotehtavan aloitus" />
+    <MESSAGE value="week 2 recap_3" />
+    <option name="LAST_COMMIT_MESSAGE" value="week 2 recap_3" />
   </component>
 </project>

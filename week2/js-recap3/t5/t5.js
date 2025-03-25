@@ -780,51 +780,43 @@ const options = {
 
 function success(pos) {
   const crd = pos.coords;
-  console.log(crd);  // Check if geolocation is working (latitude, longitude)
+  console.log(crd);
 
-  const alkupiste = [crd.latitude, crd.longitude];  // User's current location
+  const alkupiste = [crd.latitude, crd.longitude];
 
-  // Ensure the element exists
   const mapElement = document.getElementById("map");
   if (!mapElement) {
     console.error("Map element not found!");
     return;
   }
 
-  // Initialize the map with the user's current location
   const map = L.map("map").setView(alkupiste, 13);
 
-  // Add the tile layer (required for map background)
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
 
-  // Add a blue marker for the user's current location (Geolocation blue dot)
   L.circleMarker(alkupiste, {
     color: 'red',
-    radius: 10, // Size of the circle marker
-    fillColor: 'red',  // Color of the inner part of the circle
-    fillOpacity: 0.7,  // Opacity of the fill
-    weight: 2  // Border thickness
+    radius: 10,
+    fillColor: 'red',
+    fillOpacity: 0.7,
+    weight: 2
   }).addTo(map)
       .bindPopup("You are here!")
       .openPopup();
 
 
-  // Loop through each restaurant and add a marker on the map
   restaurants.forEach(restaurant => {
-    const restaurantLocation = restaurant.location.coordinates; // Directly get coordinates from restaurant data
+    const restaurantLocation = restaurant.location.coordinates;
     const name = restaurant.name;
     const address = restaurant.address;
 
-    // Ensure coordinates are in [latitude, longitude] format
-    const lat = restaurantLocation[1]; // latitude (second element)
-    const lon = restaurantLocation[0]; // longitude (first element)
+    const lat = restaurantLocation[1];
+    const lon = restaurantLocation[0];
 
-    // Create a marker for each restaurant
     const marker = L.marker([lat, lon]).addTo(map);
 
-    // Bind a popup to the marker with restaurant details
     marker.bindPopup(`
       <h3>${name}</h3>
       <p>${address}</p>
@@ -838,7 +830,6 @@ function error(err) {
   console.warn(`ERROR(${err.code}): ${err.message}`);
 }
 
-// Get user's location and trigger map creation
 navigator.geolocation.getCurrentPosition(success, error, options);
 
 

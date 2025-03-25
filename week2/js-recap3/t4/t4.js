@@ -779,17 +779,30 @@ const options = {
     maximumAge: 0
 };
 
+const taulukko = document.querySelector("table");
+
 function success(pos) {
   const crd = pos.coords;
+  const alkupiste = [crd.longitude, crd.latitude];
+
   console.log(crd);
-  const alkupiste = [crd.latitude, crd.longitude];
-  restaurants.sort(function(a,b){
-    return (
-        distance(alkupiste, a.location.coordinates) -
-        distance(alkupiste, b.location.coordinates)
-    );
-  })
-  updateRestaurantTable()
+
+  restaurants.sort((a, b) => {
+    return distance(alkupiste, a.location.coordinates) - distance(alkupiste, b.location.coordinates);
+  });
+
+  for (const restaurant of restaurants ) {
+    const tr = document.createElement("tr");
+    const nameId = document.createElement("td");
+
+    nameId.innerHTML = restaurant.name;
+
+    const addressId = document.createElement("td");
+    addressId.innerHTML = restaurant.address;
+
+    tr.append(nameId, addressId);
+    taulukko.append(tr);
+  }
 }
 
 
@@ -799,27 +812,5 @@ function error(err) {
 
 navigator.geolocation.getCurrentPosition(success, error, options);
 
-console.log(restaurants)
+console.log(restaurants);
 
-function updateRestaurantTable() {
-  const table = document.querySelector("table");
-
-  // Remove old rows (except header)
-  table.querySelectorAll("tr:not(:first-child)").forEach(row => row.remove());
-
-  restaurants.forEach((restaurant) => {
-    const row = document.createElement("tr");
-
-    const nameCell = document.createElement("td");
-    nameCell.textContent = restaurant.name;
-
-    const addressCell = document.createElement("td");
-    addressCell.textContent = restaurant.address;
-
-    row.appendChild(nameCell);
-    row.appendChild(addressCell);
-    table.appendChild(row);
-  });
-
-  console.log("Restaurants sorted and displayed!");
-}
