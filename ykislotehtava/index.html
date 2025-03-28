@@ -20,9 +20,22 @@
         <li><a class="active" href="#home">Home</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#login">Login</a></li>
+        <li><a id="loginButton" href="#login">Login</a></li>
     </ul>
 </nav>
+
+<div id="loginModal" class="loginModal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</div>
 
 <main>
     <h2>Student restaurant list</h2>

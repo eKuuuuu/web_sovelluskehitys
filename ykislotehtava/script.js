@@ -76,42 +76,6 @@ function sortRestaurants() {
     });
 }
 
-/*
-function createTable() {
-    for (const restaurant of restaurants) {
-        // rivi
-        const tr = document.createElement('tr');
-        tr.addEventListener('click', async function () {
-            try {
-                for (const elem of document.querySelectorAll('.highlight')) {
-                    elem.classList.remove('highlight');
-                }
-
-                tr.classList.add('highlight');
-                // hae menu
-                const coursesResponse = await getDailyMenu(restaurant._id, 'fi');
-                // hae menu html
-                const menuHtml = createMenuHtml(coursesResponse.courses);
-
-                // tyhjennä modal
-                modal.innerHTML = '';
-                // avaa modal
-                modal.showModal();
-                // tee modalin sisältö
-                createModalHtml(restaurant, modal);
-                // lisää menu html
-                modal.insertAdjacentHTML('beforeend', menuHtml);
-            } catch (error) {
-                console.error(error);
-            }
-        });
-
-        // lisätään solut riviin
-        createRestaurantCells(restaurant, tr);
-        taulukko.append(tr);
-    }
-}
- */
 
 function createTable() {
     for (const restaurant of restaurants) {
@@ -184,6 +148,28 @@ function createTable() {
         taulukko.append(tr);
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const loginButton = document.getElementById('loginButton');
+    const loginModal = document.getElementById('loginModal');
+    const closeModal = document.querySelector('.close');
+
+    loginButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        loginModal.style.display = 'block';
+    });
+
+    closeModal.addEventListener('click', () => {
+        loginModal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target === loginModal) {
+            loginModal.style.display = 'none';
+        }
+    });
+});
+
 async function main() {
     try {
         await getRestaurants();

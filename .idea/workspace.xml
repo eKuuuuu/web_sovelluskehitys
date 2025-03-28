@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="649ae5b1-d689-4eb2-9f40-0a495c9f2269" name="Changes" comment="exercises">
-      <change afterPath="$PROJECT_DIR$/week2/js-recap5/t1/t1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week2/js-recap5/t1/t1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week2/js-recap5/t2/t2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week2/js-recap5/t2/t2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week2/js-recap5/t3/t3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week2/js-recap5/t3/t3.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ykislotehtava/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ykislotehtava/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ykislotehtava/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/ykislotehtava/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ykislotehtava/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/ykislotehtava/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,43 +51,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.index.html (1).executor": "Run",
-    "JavaScript Debug.index.html (2).executor": "Run",
-    "JavaScript Debug.index.html (3).executor": "Run",
-    "JavaScript Debug.index.html (4).executor": "Run",
-    "JavaScript Debug.index.html (5).executor": "Run",
-    "JavaScript Debug.index.html.executor": "Run",
-    "JavaScript Debug.t1.html (1).executor": "Run",
-    "JavaScript Debug.t1.html.executor": "Run",
-    "JavaScript Debug.t2.html.executor": "Run",
-    "JavaScript Debug.t3.html.executor": "Run",
-    "JavaScript Debug.t4.html (1).executor": "Run",
-    "JavaScript Debug.t4.html.executor": "Run",
-    "JavaScript Debug.t5.html (1).executor": "Run",
-    "JavaScript Debug.t5.html.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/DELL/WebstormProjects/web_sovelluskehitys/week2/js-recap5/t4",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.index.html (1).executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.index.html (2).executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.index.html (3).executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.index.html (4).executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.index.html (5).executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.t1.html (1).executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.t1.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.t2.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.t3.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.t4.html (1).executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.t4.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.t5.html (1).executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.t5.html.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL/WebstormProjects/web_sovelluskehitys/week2/js-recap5/t4&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\DELL\WebstormProjects\web_sovelluskehitys\week2\js-recap5\t4" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.t3.html">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web_sovelluskehitys/ykislotehtava/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -108,9 +105,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.t3.html" />
         <item itemvalue="JavaScript Debug.t1.html (1)" />
-        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.t2.html" />
         <item itemvalue="JavaScript Debug.t1.html" />
       </list>
@@ -140,7 +137,8 @@
       <workItem from="1742831080362" duration="1999000" />
       <workItem from="1742888319314" duration="7314000" />
       <workItem from="1742898798038" duration="10638000" />
-      <workItem from="1742973832099" duration="8023000" />
+      <workItem from="1742973832099" duration="8311000" />
+      <workItem from="1743154551942" duration="2390000" />
     </task>
     <task id="LOCAL-00001" summary="week 1 first exercise">
       <option name="closed" value="true" />
@@ -270,7 +268,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742920902226</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="exercises">
+      <option name="closed" value="true" />
+      <created>1743069830173</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1743069830173</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
