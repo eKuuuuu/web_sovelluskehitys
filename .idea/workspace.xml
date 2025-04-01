@@ -4,11 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="649ae5b1-d689-4eb2-9f40-0a495c9f2269" name="Changes" comment="exercises">
+    <list default="true" id="649ae5b1-d689-4eb2-9f40-0a495c9f2269" name="Changes" comment="made some changes to the html, css and js in yksiloprojekti">
+      <change afterPath="$PROJECT_DIR$/week2/AdvancedJS1/lib/fethData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2/AdvancedJS1/tehtava/components.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2/AdvancedJS1/tehtava/t5.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2/AdvancedJS1/tehtava/t5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2/AdvancedJS1/tehtava/t5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2/AdvancedJS1/tehtava/variables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2/AdvancedJS2/lib/fetchData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2/AdvancedJS2/tehtava/components.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2/AdvancedJS2/tehtava/t5.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2/AdvancedJS2/tehtava/t5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2/AdvancedJS2/tehtava/t5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2/AdvancedJS2/tehtava/variables.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ykislotehtava/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ykislotehtava/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ykislotehtava/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/ykislotehtava/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ykislotehtava/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/ykislotehtava/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,65 +60,66 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JavaScript Debug.index.html (1).executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.index.html (2).executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.index.html (3).executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.index.html (4).executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.index.html (5).executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.t1.html (1).executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.t1.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.t2.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.t3.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.t4.html (1).executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.t4.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.t5.html (1).executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.t5.html.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL/WebstormProjects/web_sovelluskehitys/week2/js-recap5/t4&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.index.html (1).executor": "Run",
+    "JavaScript Debug.index.html (2).executor": "Run",
+    "JavaScript Debug.index.html (3).executor": "Run",
+    "JavaScript Debug.index.html (4).executor": "Run",
+    "JavaScript Debug.index.html (5).executor": "Run",
+    "JavaScript Debug.index.html.executor": "Run",
+    "JavaScript Debug.t1.html (1).executor": "Run",
+    "JavaScript Debug.t1.html.executor": "Run",
+    "JavaScript Debug.t2.html.executor": "Run",
+    "JavaScript Debug.t3.html.executor": "Run",
+    "JavaScript Debug.t4.html (1).executor": "Run",
+    "JavaScript Debug.t4.html.executor": "Run",
+    "JavaScript Debug.t5.html (1).executor": "Run",
+    "JavaScript Debug.t5.html (2).executor": "Run",
+    "JavaScript Debug.t5.html.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/DELL/WebstormProjects/web_sovelluskehitys/week2/js-recap5/t4",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\DELL\WebstormProjects\web_sovelluskehitys\week2\js-recap5\t4" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html">
+  <component name="RunManager" selected="JavaScript Debug.t5.html (2)">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web_sovelluskehitys/ykislotehtava/index.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="t1.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web_sovelluskehitys/week2/js-recap4/t1/t1.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="t1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web_sovelluskehitys/week2/js-recap5/t1/t1.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="t2.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web_sovelluskehitys/week2/js-recap5/t2/t2.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="t3.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web_sovelluskehitys/week2/js-recap5/t3/t3.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="t5.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web_sovelluskehitys/week2/js-recap5/t5/t5.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="t5.html (2)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web_sovelluskehitys/week2/AdvancedJS2/tehtava/t5.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="t5.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web_sovelluskehitys/week2/AdvancedJS1/tehtava/t5.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.t5.html (2)" />
+        <item itemvalue="JavaScript Debug.t5.html (1)" />
+        <item itemvalue="JavaScript Debug.t5.html" />
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.t3.html" />
-        <item itemvalue="JavaScript Debug.t1.html (1)" />
-        <item itemvalue="JavaScript Debug.t2.html" />
-        <item itemvalue="JavaScript Debug.t1.html" />
       </list>
     </recent_temporary>
   </component>
@@ -138,7 +148,8 @@
       <workItem from="1742888319314" duration="7314000" />
       <workItem from="1742898798038" duration="10638000" />
       <workItem from="1742973832099" duration="8311000" />
-      <workItem from="1743154551942" duration="2390000" />
+      <workItem from="1743154551942" duration="2595000" />
+      <workItem from="1743488710803" duration="10896000" />
     </task>
     <task id="LOCAL-00001" summary="week 1 first exercise">
       <option name="closed" value="true" />
@@ -276,7 +287,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743069830173</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="made some changes to the html, css and js in yksiloprojekti">
+      <option name="closed" value="true" />
+      <created>1743170075323</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1743170075323</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,6 +310,7 @@
     <MESSAGE value="week 2 recap_3" />
     <MESSAGE value="worked on exercises and yksilotehtava" />
     <MESSAGE value="exercises" />
-    <option name="LAST_COMMIT_MESSAGE" value="exercises" />
+    <MESSAGE value="made some changes to the html, css and js in yksiloprojekti" />
+    <option name="LAST_COMMIT_MESSAGE" value="made some changes to the html, css and js in yksiloprojekti" />
   </component>
 </project>
