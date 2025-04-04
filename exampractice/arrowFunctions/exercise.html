@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1>Answer in console</h1>
+<script>
+  // Sample expenses array
+  const expenses = [
+    { category: "Food", amount: 50 },
+    { category: "Transportation", amount: 30 },
+    { category: "Entertainment", amount: 20 }
+  ];
+
+  const calculateTotalExpenses = (expenses) => {
+    const total = expenses.reduce((acc, expense) => acc + expense.amount, 0);
+    return total;
+  }
+
+  // Test the calculateTotalExpenses function
+  const totalExpenses = calculateTotalExpenses(expenses);
+  console.log(totalExpenses);
+
+  // Output should be:
+  // 100
+</script>
+</body>
+</html>

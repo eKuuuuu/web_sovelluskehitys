@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Check the console</h1>
+<script>
+  // Step 1: Object Destructuring
+  const book = {
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
+    year: 1925,
+    genre: "Classic"
+  };
+
+  function displayBookInfo(book) {
+    const {title, author, year} = book;
+
+    console.log(`Title: ${title}, Author: ${author}, Year: ${year}`);
+  }
+
+  // Step 2: Array Destructuring
+  const bookList = [
+    { title: "The Catcher in the Rye", author: "J.D. Salinger", year: 1951, genre: "Classic" },
+    { title: "To Kill a Mockingbird", author: "Harper Lee", year: 1960, genre: "Classic" },
+    { title: "1984", author: "George Orwell", year: 1949, genre: "Dystopian" }
+  ];
+
+  function listBookTitles(bookList) {
+    const titles = [];
+    for (const book of bookList) {
+      const {title} = book;
+
+      titles.push(title);
+    }
+    return titles;
+  }
+
+  // Step 3: Nested Object Destructuring
+  const bookWithPublisher = {
+    title: "Harry Potter and the Sorcerer's Stone",
+    author: "J.K. Rowling",
+    year: 1997,
+    genre: "Fantasy",
+    publisher: {
+      name: "Scholastic",
+      location: "New York"
+    }
+  };
+
+  function displayPublisherLocation(book) {
+    const {location} = book.publisher;
+
+    console.log(`Publisher Location: ${location}`);
+  }
+
+  // Step 4: Default Values in Destructuring
+  const incompleteBook = {
+    title: "Incomplete Book"
+  };
+
+  function fillMissingInfo(book) {
+    const { title, author = "Unknown Author", year = "Unknown Year" } = book;
+
+    console.log(`Title: ${title}, Author: ${author}, Year: ${year}`);
+  }
+
+  // Test the functions
+  displayBookInfo(book);
+  console.log(listBookTitles(bookList));
+  displayPublisherLocation(bookWithPublisher);
+  fillMissingInfo(incompleteBook);
+</script>
+</body>
+</html>

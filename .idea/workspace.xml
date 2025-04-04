@@ -4,19 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="649ae5b1-d689-4eb2-9f40-0a495c9f2269" name="Changes" comment="made some changes to the html, css and js in yksiloprojekti">
-      <change afterPath="$PROJECT_DIR$/week2/AdvancedJS1/lib/fethData.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week2/AdvancedJS1/tehtava/components.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week2/AdvancedJS1/tehtava/t5.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week2/AdvancedJS1/tehtava/t5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week2/AdvancedJS1/tehtava/t5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week2/AdvancedJS1/tehtava/variables.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week2/AdvancedJS2/lib/fetchData.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week2/AdvancedJS2/tehtava/components.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week2/AdvancedJS2/tehtava/t5.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week2/AdvancedJS2/tehtava/t5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week2/AdvancedJS2/tehtava/t5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week2/AdvancedJS2/tehtava/variables.js" afterDir="false" />
+    <list default="true" id="649ae5b1-d689-4eb2-9f40-0a495c9f2269" name="Changes" comment="did advanced exercises that were apparently supposed to be done last week already">
+      <change afterPath="$PROJECT_DIR$/exampractice/arrowFunctions/exercise.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exampractice/books/exercise1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exampractice/filter/exercise.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exampractice/forEach/exercise1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exampractice/iife/exercise1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exampractice/iife/exercise1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exampractice/map/exercise.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exampractice/reduce/exercise.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exampractice/todos/exercise2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exampractice/todos/exercise2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,8 +27,8 @@
       <list>
         <option value="TypeScript File" />
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -63,6 +61,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.exercise.html (1).executor": "Run",
+    "JavaScript Debug.exercise.html (2).executor": "Run",
+    "JavaScript Debug.exercise.html (3).executor": "Run",
+    "JavaScript Debug.exercise.html.executor": "Run",
+    "JavaScript Debug.exercise1.html (1).executor": "Run",
+    "JavaScript Debug.exercise1.html (2).executor": "Run",
+    "JavaScript Debug.exercise1.html.executor": "Run",
+    "JavaScript Debug.exercise2.html.executor": "Run",
     "JavaScript Debug.index.html (1).executor": "Run",
     "JavaScript Debug.index.html (2).executor": "Run",
     "JavaScript Debug.index.html (3).executor": "Run",
@@ -97,29 +103,29 @@
       <recent name="C:\Users\DELL\WebstormProjects\web_sovelluskehitys\week2\js-recap5\t4" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.t5.html (2)">
-    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web_sovelluskehitys/ykislotehtava/index.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="JavaScript Debug.exercise.html (3)">
+    <configuration name="exercise1.html (2)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web_sovelluskehitys/exampractice/forEach/exercise1.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="t3.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web_sovelluskehitys/week2/js-recap5/t3/t3.html" useBuiltInWebServerPort="true">
+    <configuration name="exercise.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web_sovelluskehitys/exampractice/filter/exercise.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="t5.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web_sovelluskehitys/week2/js-recap5/t5/t5.html" useBuiltInWebServerPort="true">
+    <configuration name="exercise.html (2)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web_sovelluskehitys/exampractice/reduce/exercise.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="t5.html (2)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web_sovelluskehitys/week2/AdvancedJS2/tehtava/t5.html" useBuiltInWebServerPort="true">
+    <configuration name="exercise.html (3)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web_sovelluskehitys/exampractice/arrowFunctions/exercise.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="t5.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web_sovelluskehitys/week2/AdvancedJS1/tehtava/t5.html" useBuiltInWebServerPort="true">
+    <configuration name="exercise.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web_sovelluskehitys/exampractice/map/exercise.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.t5.html (2)" />
-        <item itemvalue="JavaScript Debug.t5.html (1)" />
-        <item itemvalue="JavaScript Debug.t5.html" />
-        <item itemvalue="JavaScript Debug.index.html" />
-        <item itemvalue="JavaScript Debug.t3.html" />
+        <item itemvalue="JavaScript Debug.exercise.html (3)" />
+        <item itemvalue="JavaScript Debug.exercise.html (2)" />
+        <item itemvalue="JavaScript Debug.exercise.html (1)" />
+        <item itemvalue="JavaScript Debug.exercise.html" />
+        <item itemvalue="JavaScript Debug.exercise1.html (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -149,7 +155,8 @@
       <workItem from="1742898798038" duration="10638000" />
       <workItem from="1742973832099" duration="8311000" />
       <workItem from="1743154551942" duration="2595000" />
-      <workItem from="1743488710803" duration="10896000" />
+      <workItem from="1743488710803" duration="11032000" />
+      <workItem from="1743523760931" duration="4537000" />
     </task>
     <task id="LOCAL-00001" summary="week 1 first exercise">
       <option name="closed" value="true" />
@@ -295,7 +302,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743170075323</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="did advanced exercises that were apparently supposed to be done last week already">
+      <option name="closed" value="true" />
+      <created>1743504025101</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1743504025101</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,6 +326,7 @@
     <MESSAGE value="worked on exercises and yksilotehtava" />
     <MESSAGE value="exercises" />
     <MESSAGE value="made some changes to the html, css and js in yksiloprojekti" />
-    <option name="LAST_COMMIT_MESSAGE" value="made some changes to the html, css and js in yksiloprojekti" />
+    <MESSAGE value="did advanced exercises that were apparently supposed to be done last week already" />
+    <option name="LAST_COMMIT_MESSAGE" value="did advanced exercises that were apparently supposed to be done last week already" />
   </component>
 </project>
