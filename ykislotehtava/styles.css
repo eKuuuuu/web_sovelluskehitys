@@ -103,13 +103,100 @@ header {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Add spacing between the fields */
+}
+
+#loginForm label {
+    margin-bottom: 5px;
+}
+
+#loginForm input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.signup-text {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.signup-text a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
+}
+
+
+
+#signupModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#signupForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#signupForm label {
+    margin-bottom: 5px;
+}
+
+#signupForm input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
 .modal-content {
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 50%; /* Reduce width to 50% */
+    box-sizing: border-box; /* Ensure padding is included in the width */
 }
+
+.close-signup {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-signup:hover,
+.close-signup:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 .close {
     color: #aaa;
@@ -122,6 +209,41 @@ header {
 .close:focus {
     color: black;
     text-decoration: none;
+    cursor: pointer;
+}
+
+.searchbar {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.searchbar-form {
+    width: 100%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 1);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+}
+
+.searchbar-form input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: black;
+}
+
+.searchbar-form button {
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: #0077cc;
     cursor: pointer;
 }
 
@@ -144,11 +266,11 @@ header {
     table, th, td {
         display: block;
         width: 100%;
+        text-align: left; /* Align text to the left */
     }
 
     th, td {
-        text-align: right;
-        padding-left: 50%;
+        padding-left: 10px;
         position: relative;
     }
 
@@ -160,5 +282,12 @@ header {
         padding-left: 10px;
         text-align: left;
         font-weight: bold;
+    }
+
+    .address-column,
+    .city-column,
+    th:nth-child(2), /* Hide Address header */
+    th:nth-child(3)  /* Hide City header */ {
+        display: none;
     }
 }

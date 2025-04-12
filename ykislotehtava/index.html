@@ -12,17 +12,23 @@
 <body>
 
 <header>
-    <h1>Yksilötehtävä</h1>
+    <h1>Student Restaurant Library</h1>
 </header>
 
 <nav>
     <ul>
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a id="mapButton" href="#map">Map</a></li>
         <li><a id="loginButton" href="#login">Login</a></li>
     </ul>
 </nav>
+
+<div id="mapModal" class="modal">
+    <div class="modal-content">
+        <span class="close-map">&times;</span>
+        <p>Welcome to the map section! The map will be displayed here.</p>
+    </div>
+</div>
 
 <div id="loginModal" class="loginModal">
     <div class="modal-content">
@@ -30,11 +36,50 @@
         <form id="loginForm">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
+
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
+
+            <div class="remember-me">
+                <input type="checkbox" id="rememberMe" name="rememberMe">
+                <label for="rememberMe">Remember Me</label>
+            </div>
+
             <button type="submit">Login</button>
+
+            <p class="signup-text">Haven't made an account yet? <a href="#signup">Sign up!</a></p>
         </form>
     </div>
+</div>
+
+<div id="signupModal" class="loginModal">
+    <div class="modal-content">
+        <span class="close-signup">&times;</span>
+        <form id="signupForm">
+            <label for="signupUsername">Username:</label>
+            <input type="text" id="signupUsername" name="signupUsername" required>
+
+            <label for="signupEmail">Email:</label>
+            <input type="email" id="signupEmail" name="signupEmail" required>
+
+            <label for="signupPassword">Password:</label>
+            <input type="password" id="signupPassword" name="signupPassword" required>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+            <button type="submit">Sign Up</button>
+
+            <p class="signin-text">Already have an account? <a href="#login">Sign-in!</a></p>
+        </form>
+    </div>
+</div>
+
+<div class="searchbar">
+    <form action="" class="searchbar-form">
+        <input type="text" id="searchInput" placeholder="Search by name">
+        <button id="searchButton">Go</button>
+    </form>
 </div>
 
 <main>
@@ -50,6 +95,7 @@
         <!-- Add restaurant rows here -->
     </table>
 </main>
+
 
 <!-- Modal -->
 <dialog id="modal">
