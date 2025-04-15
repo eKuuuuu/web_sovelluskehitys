@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="649ae5b1-d689-4eb2-9f40-0a495c9f2269" name="Changes" comment="did advanced exercises that were apparently supposed to be done last week already">
+    <list default="true" id="649ae5b1-d689-4eb2-9f40-0a495c9f2269" name="Changes" comment="yksilöprojektia varten">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ykislotehtava/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ykislotehtava/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ykislotehtava/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/ykislotehtava/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ykislotehtava/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/ykislotehtava/styles.css" afterDir="false" />
     </list>
@@ -41,7 +40,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/ykislotehtava/script.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/ykislotehtava/script.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -99,7 +98,7 @@
       <recent name="C:\Users\DELL\WebstormProjects\web_sovelluskehitys\week2\js-recap5\t4" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.t5.html">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration name="exercise.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web_sovelluskehitys/exampractice/filter/exercise.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -117,8 +116,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.t5.html" />
         <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.t5.html" />
         <item itemvalue="JavaScript Debug.exercise.html (3)" />
         <item itemvalue="JavaScript Debug.exercise.html (2)" />
         <item itemvalue="JavaScript Debug.exercise.html (1)" />
@@ -154,7 +153,9 @@
       <workItem from="1743488710803" duration="11032000" />
       <workItem from="1743523760931" duration="4537000" />
       <workItem from="1743763270777" duration="115000" />
-      <workItem from="1744367788598" duration="8389000" />
+      <workItem from="1744367788598" duration="8510000" />
+      <workItem from="1744611868738" duration="719000" />
+      <workItem from="1744616869304" duration="10113000" />
     </task>
     <task id="LOCAL-00001" summary="week 1 first exercise">
       <option name="closed" value="true" />
@@ -316,7 +317,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743763289793</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="yksilöprojektia varten">
+      <option name="closed" value="true" />
+      <created>1744470967624</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1744470967624</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,6 +342,7 @@
     <MESSAGE value="exercises" />
     <MESSAGE value="made some changes to the html, css and js in yksiloprojekti" />
     <MESSAGE value="did advanced exercises that were apparently supposed to be done last week already" />
-    <option name="LAST_COMMIT_MESSAGE" value="did advanced exercises that were apparently supposed to be done last week already" />
+    <MESSAGE value="yksilöprojektia varten" />
+    <option name="LAST_COMMIT_MESSAGE" value="yksilöprojektia varten" />
   </component>
 </project>

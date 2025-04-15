@@ -80,6 +80,111 @@ async function getWeeklyMenu(id, lang) {
     }
 }
 
+async function fetchUserData() {
+    const token = localStorage.getItem('authToken');
+    if (!token) {
+        console.error('No token found');
+        return null;
+    }
+
+    try {
+        const response = await fetch('https://media2.edu.metropolia.fi/restaurant/api/v1/users/token', {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+            },
+        });
+
+        if (response.ok) {
+            return await response.json(); // Return user data
+        } else {
+            console.error('Failed to fetch user data');
+            return null;
+        }
+    } catch (error) {
+        console.error('Error fetching user data:', error);
+        return null;
+    }
+}
+
+async function uploadAvatar() {
+    const token = localStorage.getItem('authToken');
+    const avatarInput = document.getElementById('avatarInput');
+    const file = avatarInput.files[0];
+
+    if (!file) {
+        alert('Please select an image to upload.');
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append('avatar', file);
+
+    try {
+        const response = await fetch('https://media2.edu.metropolia.fi/restaurant/api/v1/users/avatar', {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+            },
+            body: formData,
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            alert('Avatar uploaded successfully!');
+            console.log('Avatar URL:', data.fileName);
+            // Update the avatar dynamically
+            const profileAvatar = document.getElementById('profileAvatar');
+            profileAvatar.src = `https://media2.edu.metropolia.fi/restaurant/uploads/${data.fileName}`; // Fetch directly from /uploads
+        } else {
+            const errorData = await response.json();
+            alert(`Error: ${errorData.message || 'Failed to upload avatar'}`);
+        }
+    } catch (error) {
+        console.error('Error uploading avatar:', error);
+        alert('An error occurred while uploading the avatar.');
+    }
+}
+
+async function updateUser() {
+    const token = localStorage.getItem('authToken');
+    if (!token) {
+        alert('You must be logged in to update your information.');
+        return;
+    }
+
+    const newUsername = document.getElementById('newUsername').value;
+    const newEmail = document.getElementById('newEmail').value;
+    const newPassword = document.getElementById('newPassword').value;
+
+    const updatedData = {};
+    if (newUsername) updatedData.username = newUsername;
+    if (newEmail) updatedData.email = newEmail;
+    if (newPassword) updatedData.password = newPassword;
+
+    try {
+        const response = await fetch('https://media2.edu.metropolia.fi/restaurant/api/v1/users', {
+            method: 'PUT',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(updatedData),
+        });
+
+        if (response.ok) {
+            alert('User information updated successfully!');
+            // Optionally, refresh the profile modal with updated data
+        } else {
+            const errorData = await response.json();
+            alert(`Error: ${errorData.message || 'Failed to update user information'}`);
+        }
+    } catch (error) {
+        console.error('Error updating user information:', error);
+        alert('An error occurred while updating your information.');
+    }
+}
+
 // restaurants aakkosjärjestykseen
 function sortRestaurants() {
     restaurants.sort(function (a, b) {
@@ -242,6 +347,214 @@ document.addEventListener('DOMContentLoaded', () => {
             mapModal.style.display = 'none';
         }
     });
+});
+
+document.getElementById('loginForm').addEventListener('submit', async (event) => {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Collect form data
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Prepare the request payload
+    const loginData = {
+        username: username,
+        password: password,
+    };
+
+    try {
+        // Send the POST request
+        const response = await fetch('https://media2.edu.metropolia.fi/restaurant/api/v1/auth/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(loginData),
+        });
+
+        if (response.ok) {
+            const responseData = await response.json();
+            alert('Login successful!');
+            console.log('Token:', responseData.token); // Log the token for further use
+            loginModal.style.display = 'none'; // Close the login modal
+        } else {
+            const errorData = await response.json();
+            alert(`Error: ${errorData.message || 'Failed to log in'}`);
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('An error occurred while logging in.');
+    }
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const loginButton = document.getElementById('loginButton');
+    const loginModal = document.getElementById('loginModal');
+    const profileModal = document.createElement('div');
+
+    // Check if the user is already logged in
+    const token = localStorage.getItem('authToken');
+    if (token) {
+        loginButton.textContent = 'Profile';
+        loginButton.href = '#profile';
+    }
+
+    // Handle login form submission
+    document.getElementById('loginForm').addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        try {
+            const response = await fetch('https://media2.edu.metropolia.fi/restaurant/api/v1/auth/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username, password }),
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                localStorage.setItem('authToken', data.token); // Save token to localStorage
+                alert('Login successful!');
+                loginModal.style.display = 'none';
+                loginButton.textContent = 'Profile';
+                loginButton.href = '#profile';
+            } else {
+                const errorData = await response.json();
+                alert(`Error: ${errorData.message || 'Failed to log in'}`);
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred while logging in.');
+        }
+    });
+
+    // Create profile modal
+    profileModal.id = 'profileModal';
+    profileModal.className = 'loginModal';
+    profileModal.innerHTML = `
+        <div class="modal-content">
+            <span class="close-profile">&times;</span>
+            <h2>Profile</h2>
+            <p id="profileUsername">Username: </p>
+            <p id="profileEmail">E-mail: </p>
+            <img id="profileAvatar" src="" alt="Profile Picture" style="width: 100px; height: 100px; border-radius: 50%;">
+            <input type="file" id="avatarInput" accept="image/*" style="margin-top: 10px;">
+            <button id="uploadAvatarButton">Upload Image</button>
+            
+            <h3>Update Information</h3>
+            <label for="newUsername">New Username:</label>
+            <input type="text" id="newUsername" placeholder="Enter new username">
+            
+            <label for="newEmail">New Email:</label>
+            <input type="email" id="newEmail" placeholder="Enter new email">
+            
+            <label for="newPassword">New Password:</label>
+            <input type="password" id="newPassword" placeholder="Enter new password">
+            
+            <button id="updateUserButton">Update Information</button>
+            <button id="logoutButton">Logout</button>
+        </div>
+    `;
+    document.body.appendChild(profileModal);
+
+    document.getElementById('updateUserButton').addEventListener('click', updateUser);
+
+    // Open profile modal and populate it with user data
+    loginButton.addEventListener('click', async (event) => {
+        const token = localStorage.getItem('authToken');
+        if (token) {
+            event.preventDefault();
+            loginModal.style.display = 'none'; // Ensure the login modal is hidden
+
+            try {
+                // Fetch user data
+                const userData = await fetchUserData();
+                if (userData) {
+                    // Populate profile modal with user data
+                    profileModal.querySelector('h2').innerText = `Welcome, ${userData.username || 'User'}!`;
+                    profileModal.querySelector('#profileUsername').innerText = `Username: ${userData.username || 'N/A'}`;
+                    profileModal.querySelector('#profileEmail').innerText = `E-mail: ${userData.email || 'N/A'}`;
+
+                    // Fetch avatar directly from /uploads
+                    profileModal.querySelector('#profileAvatar').src = userData.avatar
+                        ? `https://media2.edu.metropolia.fi/restaurant/uploads/${userData.avatar}`
+                        : 'default-avatar.png'; // Fallback to default avatar
+                } else {
+                    console.error('Failed to retrieve user data.');
+                    alert('Could not load profile data. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error fetching profile data:', error);
+                alert('An error occurred while loading the profile.');
+            }
+
+            profileModal.style.display = 'block'; // Show the profile modal
+        }
+    });
+
+    document.body.appendChild(profileModal);
+
+    // Add event listener for the upload button
+    document.getElementById('uploadAvatarButton').addEventListener('click', uploadAvatar);
+
+    // Close profile modal
+    profileModal.querySelector('.close-profile').addEventListener('click', () => {
+        profileModal.style.display = 'none';
+    });
+
+    // Handle logout
+    document.getElementById('logoutButton').addEventListener('click', () => {
+        localStorage.removeItem('authToken'); // Clear token from localStorage
+        alert('Logged out successfully!');
+        profileModal.style.display = 'none';
+        loginButton.textContent = 'Login';
+        loginButton.href = '#login';
+    });
+});
+
+document.getElementById('signupForm').addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const username = document.getElementById('signupUsername').value;
+    const email = document.getElementById('signupEmail').value;
+    const password = document.getElementById('signupPassword').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+
+    if (password !== confirmPassword) {
+        alert('Passwords do not match!');
+        return;
+    }
+
+    const userData = {
+        username: username,
+        password: password,
+        email: email,
+    };
+
+    try {
+        const response = await fetch('https://media2.edu.metropolia.fi/restaurant/api/v1/users', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(userData),
+        });
+
+        if (response.ok) {
+            alert('User created successfully!');
+            document.getElementById('signupForm').reset(); // Reset the form
+            signupModal.style.display = 'none'; // Close the signup modal
+        } else {
+            const errorData = await response.json();
+            alert(`Error: ${errorData.message || 'Failed to create user'}`);
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('An error occurred while creating the user.');
+    }
 });
 
 // Show the signup modal and close the login modal when "Sign up!" is clicked
