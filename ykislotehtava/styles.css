@@ -347,6 +347,52 @@ header {
     cursor: pointer;
 }
 
+#mapContainer {
+    width: 80%;
+    height: 60dvh;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mapModal .modal-content {
+    background: none; /* Remove the white background */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#map {
+    position: relative; /* Ensure the button is positioned relative to the map */
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+}
+
+#map .close {
+    position: absolute;
+    top: 10px; /* Distance from the top of the map */
+    right: 10px; /* Distance from the right of the map */
+    font-size: 20px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border: none;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 1000; /* Ensure it appears above the map */
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
     nav ul {

@@ -31,6 +31,68 @@ function createRestaurantCells(restaurant, tr) {
     tr.append(nameTd, addressTd, cityTd);
 }
 
+// map stuff
+const options = {
+    enableHighAccuracy: true,
+    timeout: 5000,
+    maximumAge: 0
+};
+
+
+function success(pos) {
+    const crd = pos.coords;
+    console.log(crd);
+
+    const alkupiste = [crd.latitude, crd.longitude];
+
+    const mapElement = document.getElementById("map");
+    if (!mapElement) {
+        console.error("Map element not found!");
+        return;
+    }
+
+    const map = L.map("map").setView(alkupiste, 13);
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    L.circleMarker(alkupiste, {
+        color: 'red',
+        radius: 10,
+        fillColor: 'red',
+        fillOpacity: 0.7,
+        weight: 2
+    }).addTo(map)
+        .bindPopup("You are here!")
+        .openPopup();
+
+
+    restaurants.forEach(restaurant => {
+        const restaurantLocation = restaurant.location.coordinates;
+        const name = restaurant.name;
+        const address = restaurant.address;
+
+        const lat = restaurantLocation[1];
+        const lon = restaurantLocation[0];
+
+        const marker = L.marker([lat, lon]).addTo(map);
+
+        marker.bindPopup(`
+      <h3>${name}</h3>
+      <p>${address}</p>
+    `);
+    });
+
+    console.log("Map successfully loaded at", alkupiste);
+}
+
+function error(err) {
+    console.warn(`ERROR(${err.code}): ${err.message}`);
+}
+
+navigator.geolocation.getCurrentPosition(success, error, options);
+
 function createModalHtml(restaurant, modal) {
     const nameH3 = document.createElement('h3');
     nameH3.innerText = restaurant.name;
@@ -347,6 +409,10 @@ document.addEventListener('DOMContentLoaded', () => {
             mapModal.style.display = 'none';
         }
     });
+});
+
+document.querySelector('#mapModal .close').addEventListener('click', () => {
+    document.getElementById('mapModal').style.display = 'none';
 });
 
 document.getElementById('loginForm').addEventListener('submit', async (event) => {
