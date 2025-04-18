@@ -33,16 +33,25 @@ function createRestaurantCells(restaurant, tr) {
 
 // map stuff
 const options = {
-    enableHighAccuracy: true,
-    timeout: 5000,
-    maximumAge: 0
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0
 };
 
+function calculateDistance(lat1, lon1, lat2, lon2) {
+    const R = 6371; // Radius of the Earth in kilometers
+    const dLat = (lat2 - lat1) * (Math.PI / 180);
+    const dLon = (lon2 - lon1) * (Math.PI / 180);
+    const a =
+        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.cos(lat1 * (Math.PI / 180)) * Math.cos(lat2 * (Math.PI / 180)) *
+        Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    return R * c; // Distance in kilometers
+}
 
 function success(pos) {
     const crd = pos.coords;
-    console.log(crd);
-
     const alkupiste = [crd.latitude, crd.longitude];
 
     const mapElement = document.getElementById("map");
@@ -67,29 +76,62 @@ function success(pos) {
         .bindPopup("You are here!")
         .openPopup();
 
+    fetch("https://media2.edu.metropolia.fi/restaurant/api/v1/restaurants/")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Failed to fetch restaurant data");
+            }
+            return response.json();
+        })
+        .then(restaurants => {
+            let closestRestaurant = null;
+            let minDistance = Infinity;
 
-    restaurants.forEach(restaurant => {
-        const restaurantLocation = restaurant.location.coordinates;
-        const name = restaurant.name;
-        const address = restaurant.address;
+            restaurants.forEach(restaurant => {
+                const [lon, lat] = restaurant.location.coordinates;
+                const distance = calculateDistance(crd.latitude, crd.longitude, lat, lon);
 
-        const lat = restaurantLocation[1];
-        const lon = restaurantLocation[0];
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    closestRestaurant = restaurant;
+                }
 
-        const marker = L.marker([lat, lon]).addTo(map);
+                // Add a regular marker for each restaurant
+                L.marker([lat, lon]).addTo(map)
+                    .bindPopup(`
+            <h3>${restaurant.name}</h3>
+            <p>${restaurant.address}</p>
+          `);
+            });
 
-        marker.bindPopup(`
-      <h3>${name}</h3>
-      <p>${address}</p>
-    `);
-    });
-
-    console.log("Map successfully loaded at", alkupiste);
+            // Highlight the closest restaurant
+            if (closestRestaurant) {
+                const [closestLon, closestLat] = closestRestaurant.location.coordinates;
+                L.circleMarker([closestLat, closestLon], {
+                    color: 'blue',
+                    radius: 12,
+                    fillColor: 'blue',
+                    fillOpacity: 0.8,
+                    weight: 3
+                }).addTo(map)
+                    .bindPopup(`
+            <h3>${closestRestaurant.name}</h3>
+            <p>${closestRestaurant.address}</p>
+            <p><strong>Closest restaurant. Distance:</strong> ${minDistance.toFixed(2)} km</p>
+          `)
+                    .openPopup();
+            }
+        })
+        .catch(error => {
+            console.error("Error fetching restaurant data:", error);
+        });
 }
 
 function error(err) {
-    console.warn(`ERROR(${err.code}): ${err.message}`);
+  console.warn(`ERROR(${err.code}): ${err.message}`);
 }
+
+navigator.geolocation.getCurrentPosition(success, error, options);
 
 navigator.geolocation.getCurrentPosition(success, error, options);
 
@@ -330,38 +372,20 @@ function createTable() {
 document.addEventListener('DOMContentLoaded', () => {
     const loginButton = document.getElementById('loginButton');
     const loginModal = document.getElementById('loginModal');
-    const closeModal = document.querySelector('.close');
+    const closeLoginModal = loginModal.querySelector('.close'); // Ensure correct targeting
 
+    // Open the login modal
     loginButton.addEventListener('click', (event) => {
         event.preventDefault();
         loginModal.style.display = 'block';
     });
 
-    closeModal.addEventListener('click', () => {
+    // Close the login modal
+    closeLoginModal.addEventListener('click', () => {
         loginModal.style.display = 'none';
     });
 
-    window.addEventListener('click', (event) => {
-        if (event.target === loginModal) {
-            loginModal.style.display = 'none';
-        }
-    });
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    const loginButton = document.getElementById('loginButton');
-    const loginModal = document.getElementById('loginModal');
-    const closeModal = document.querySelector('.close');
-
-    loginButton.addEventListener('click', (event) => {
-        event.preventDefault();
-        loginModal.style.display = 'block';
-    });
-
-    closeModal.addEventListener('click', () => {
-        loginModal.style.display = 'none';
-    });
-
+    // Close the login modal when clicking outside of it
     window.addEventListener('click', (event) => {
         if (event.target === loginModal) {
             loginModal.style.display = 'none';
@@ -411,6 +435,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+
 document.querySelector('#mapModal .close').addEventListener('click', () => {
     document.getElementById('mapModal').style.display = 'none';
 });
@@ -453,6 +479,55 @@ document.getElementById('loginForm').addEventListener('submit', async (event) =>
     }
 });
 
+
+document.getElementById('loginForm').addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const rememberMe = document.getElementById('rememberMe').checked; // Check if "Remember Me" is checked
+
+    try {
+        const response = await fetch('https://media2.edu.metropolia.fi/restaurant/api/v1/auth/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ username, password }),
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            const token = data.token;
+
+            // Save token based on "Remember Me" selection
+            if (rememberMe) {
+                localStorage.setItem('authToken', token); // Persist token
+            } else {
+                sessionStorage.setItem('authToken', token); // Temporary token
+            }
+
+            alert('Login successful!');
+            loginModal.style.display = 'none';
+            loginButton.textContent = 'Profile';
+            loginButton.href = '#profile';
+        } else {
+            const errorData = await response.json();
+            alert(`Error: ${errorData.message || 'Failed to log in'}`);
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('An error occurred while logging in.');
+    }
+});
+
+// On page load, check for token
+document.addEventListener('DOMContentLoaded', () => {
+    const token = localStorage.getItem('authToken') || sessionStorage.getItem('authToken');
+    if (token) {
+        // Automatically log the user in and update the UI
+        loginButton.textContent = 'Profile';
+        loginButton.href = '#profile';
+    }
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     const loginButton = document.getElementById('loginButton');
@@ -648,6 +723,8 @@ window.addEventListener('click', (event) => {
         signupModal.style.display = 'none';
     }
 });
+
+
 
 async function main() {
     try {
